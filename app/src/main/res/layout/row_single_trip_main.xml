@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="197dp"
+    android:layout_height="163dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="6dp"
+    >
+    <!--android:background="@drawable/row_single_trip_img"-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/item_row_img"
+        android:scaleType="fitXY"
+        />
+</android.support.v7.widget.CardView>

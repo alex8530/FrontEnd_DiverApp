@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.SignUp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingStart="37dp"
+            android:paddingEnd="37dp">
+            <LinearLayout
+                android:layout_width="102dp"
+                android:layout_height="102dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginBottom="18dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_circle_user_img">
+                <ImageView
+                    android:id="@+id/logoImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_camera" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="أرفق صورتك"
+                    android:textSize="9sp"
+                    android:textColor="#bfbfbf"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/helveticaneuew23forsky_reg"
+                    tools:ignore="SmallSp"
+                    />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/signupName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_noline_bg"
+                android:drawableRight="@drawable/ic_user"
+                android:hint="الاسم الشخصي"
+                android:gravity="center_vertical"
+                android:textSize="15sp"
+                android:textColorHint="#bfbfbf"
+                android:textColor="#49c2c5"
+                android:inputType="textPersonName"
+                android:layout_marginBottom="8dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:drawablePadding="8dp"
+                android:paddingEnd="14dp"
+                android:fontFamily="@font/helveticaneuew23forsky_reg"
+                />
+            <EditText
+                android:id="@+id/signupEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_noline_bg"
+                android:drawableRight="@drawable/icon_email"
+                android:hint="البريد الإلكتروني"
+                android:gravity="center_vertical"
+                android:textSize="15sp"
+                android:inputType="textEmailAddress"
+                android:textColorHint="#bfbfbf"
+                android:textColor="#49c2c5"
+                android:layout_marginBottom="8dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:drawablePadding="8dp"
+                android:paddingEnd="14dp"
+                android:fontFamily="@font/helveticaneuew23forsky_reg"
+                />
+            <EditText
+
+                android:id="@+id/signupPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_noline_bg"
+                android:drawableRight="@drawable/ic_password"
+                android:hint="كلمة المرور"
+                android:gravity="right"
+                android:textSize="15sp"
+                android:inputType="textPassword"
+                android:textColorHint="#bfbfbf"
+                android:textColor="#49c2c5"
+                android:layout_marginBottom="8dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:drawablePadding="8dp"
+                android:paddingEnd="14dp"
+                android:fontFamily="@font/helveticaneuew23forsky_reg"
+                />
+            <EditText
+                android:id="@+id/signupConfPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_noline_bg"
+                android:drawableRight="@drawable/ic_conf_password"
+                android:hint="تأكيد كلمة المرور"
+                android:gravity="right"
+                android:textSize="15sp"
+                android:inputType="textPassword"
+                android:textColorHint="#bfbfbf"
+                android:textColor="#49c2c5"
+                android:layout_marginBottom="13dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:drawablePadding="8dp"
+                android:paddingEnd="14dp"
+                tools:ignore="RtlCompat"
+                android:fontFamily="@font/helveticaneuew23forsky_reg"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="اختر نوع الحساب:"
+                android:textSize="12sp"
+                android:textColor="#bfbfbf"
+                android:layout_gravity="right"
+                android:layout_marginBottom="6dp"
+                android:fontFamily="@font/helveticaneuew23forsky_reg"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    android:id="@+id/proDiver_tv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="محترف غوص"
+                    android:textSize="12sp"
+                    android:textColor="@drawable/signup_tx_color"
+                    android:background="@drawable/signup_tx_bg"
+                    android:drawableEnd="@drawable/ic_pro_diver"
+                    android:drawablePadding="13dp"
+                    android:gravity="center_vertical"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:paddingEnd="17dp"
+                    android:layout_marginEnd="5dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:clickable="true"
+                    android:fontFamily="@font/helveticaneuew23forsky_reg"
+                    />
+                <TextView
+                    android:id="@+id/Diver_tv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="غواص"
+                    android:textSize="12sp"
+                    android:textColor="@drawable/signup_tx_color"
+                    android:background="@drawable/signup_tx_bg"
+                    android:drawableEnd="@drawable/ic_diver"
+                    android:drawablePadding="13dp"
+                    android:gravity="center_vertical"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:paddingEnd="17dp"
+                    android:layout_marginStart="5dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:clickable="true"
+                    android:fontFamily="@font/helveticaneuew23forsky_reg"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_marginTop="28dp">
+                <TextView
+                    android:id="@+id/iAcceptPrivacyEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helveticaneuew23forsky_reg"
+                    android:textColor="#2980ba"
+                    android:text="الشروط والأحكام"
+                    android:textSize="13sp"
+                    android:layout_marginEnd="7dp"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helveticaneuew23forsky_reg"
+                    android:text="أوافق على "
+                    android:textSize="13sp"
+                    android:layout_marginEnd="3dp"
+                    android:textColor="#a3a3a3"/>
+
+                <CheckBox
+                    android:id="@+id/termsCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/checkBoxStyle"
+                    android:buttonTint="@color/blueColor"/>
+            </LinearLayout>
+            <Button
+                android:id="@+id/signupButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/btn_blue_grad_bg"
+                android:text="انشاء الحساب"
+                android:fontFamily="@font/helveticaneuew23forsky_reg"
+                android:textColor="@drawable/button_text"
+                android:textSize="18dp"
+                android:layout_marginTop="18dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="21dp">
+                <TextView
+                    android:id="@+id/youAlredyHaveAccountEmailSignup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helveticaneuew23forsky_reg"
+                    android:textColor="#2980ba"
+                    android:text="تسجيل الدخول"
+                    android:textSize="13sp"
+                    android:layout_marginEnd="7dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helveticaneuew23forsky_reg"
+                    android:text="لديك حساب بالفعل؟"
+                    android:textSize="13sp"
+                    android:layout_marginEnd="3dp"
+                    android:textColor="#a3a3a3"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</FrameLayout>

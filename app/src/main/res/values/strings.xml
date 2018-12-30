@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">NewDiverApp</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="conf_email_tx">تحقق من بريدك الوارد واضغط على الرابط المرفق لتأكيد بريدك الإلكتروني.</string>
+
+    <string-array name="country_arrays">
+        <item>رخصة رقم 1</item>
+        <item>رخصة رقم3</item>
+        <item>رخصة رقم 2</item>
+
+    </string-array>
+    <string-array name="tripType_arrays">
+        <item>50 ر.س</item>
+        <item>100 ر.س</item>
+        <item>200 ر.س</item>
+        <item>300 ر.س</item>
+        <item>400 ر.س</item>
+        <item>500 ر.س</item>
+        <item>1000 ر.س</item>
+    </string-array>
+</resources>

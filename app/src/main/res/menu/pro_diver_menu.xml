@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/pro_diver"
+        android:icon="@drawable/ic_menu_diver"
+        tools:ignore="MenuTitle" />
+    <!--android:actionLayout=""-->
+    <item
+        android:id="@+id/notification"
+        android:icon="@drawable/ic_menu_bell"
+        tools:ignore="MenuTitle" />
+
+    <item
+        android:id="@+id/add_trip"
+        android:icon="@drawable/ic_menu_app_trip"
+        tools:ignore="MenuTitle" />
+    <item
+        android:id="@+id/all_trips"
+        android:icon="@drawable/ic_menu_trip"
+        tools:ignore="MenuTitle" />
+    <!--android:icon="@drawable/menu_steps"-->
+</menu>
