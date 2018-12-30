@@ -25,6 +25,7 @@ public class ProDiver_Main extends AppCompatActivity {
     public static FragmentManager fragmentManager;
     public static Fragment fragment, Add_Trip,Notification,ProDiver_Profile,AllTrips;
     public static FragmentTransaction fragmentTransaction;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +34,7 @@ public class ProDiver_Main extends AppCompatActivity {
         Notification = new Notification();
         ProDiver_Profile = new ProDiver_Profile();
         AllTrips = new AllTrips();
-        fragment = new  AllTrips();
+        fragment = new Fragment();
         /*********************Button Navigation View ****************************/
         bottom_navigation = (BottomNavigationView)findViewById(R.id.bottom_navigation);
         fragmentManager = getSupportFragmentManager();
@@ -63,9 +64,10 @@ public class ProDiver_Main extends AppCompatActivity {
                 return true;
             }
         });
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.container_new, fragment);
-        transaction.commit();
+        // Add by Alex
+//        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//        transaction.replace(R.id.container_new, fragment);
+//        transaction.commit();
         bottom_navigation.setSelectedItemId(R.id.all_trips);
 //        ****************************************************************************
         BottomNavigationMenuView menuView = (BottomNavigationMenuView) bottom_navigation.getChildAt(0);

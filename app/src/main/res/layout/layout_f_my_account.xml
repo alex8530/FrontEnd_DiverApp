@@ -211,6 +211,7 @@
                     android:text="شحن باستخدام بطاقة"
                     android:textSize="15sp"
                     android:textColor="#003087"
+                    android:id="@+id/btn_paypal"
                     android:fontFamily="@font/helveticaneuew23forsky_reg"
                     />
             </LinearLayout>

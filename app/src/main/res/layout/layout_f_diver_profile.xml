@@ -346,7 +346,7 @@
                         android:textColor="#ffffff"
                         />
                     <Button
-                        android:id="@+id/button_verify_phone"
+                        android:id="@+id/button_edit"
                         android:layout_width="0dp"
                         android:layout_height="31dp"
                         android:text="تعديل ملفي الشخصي"

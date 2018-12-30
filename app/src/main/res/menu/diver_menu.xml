@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/diver"
+        android:icon="@drawable/ic_menu_diver"
+        tools:ignore="MenuTitle" />
 
+    <item
+        android:id="@+id/notification"
+        android:icon="@drawable/ic_menu_bell"
+        tools:ignore="MenuTitle" />
+
+    <item
+        android:id="@+id/all_trips"
+        android:icon="@drawable/ic_menu_trip"
+        tools:ignore="MenuTitle" />
 </menu>

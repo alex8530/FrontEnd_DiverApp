@@ -1,12 +1,15 @@
 package com.example.engosama.newdiverapp.Fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
+import com.example.engosama.newdiverapp.Activities.SharedActivity;
 import com.example.engosama.newdiverapp.R;
 
 /**
@@ -15,8 +18,7 @@ import com.example.engosama.newdiverapp.R;
  * create an instance of this fragment.
  */
 public class Diver_Profile extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
@@ -59,8 +61,24 @@ public class Diver_Profile extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.layout_f_diver_profile, container, false);
+        View view =  inflater.inflate(R.layout.layout_f_diver_profile, container, false);
+
+
+
+        Button button_verify_phone=view.findViewById(R.id.button_edit);
+
+        button_verify_phone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(getActivity(),SharedActivity.class);
+                intent.putExtra("FRAGEMNT" , "EDIT_PROFILE");
+                startActivity(intent);
+            }
+        });
+
+        return view;
     }
 
 }
