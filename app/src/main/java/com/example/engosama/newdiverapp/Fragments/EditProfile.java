@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.engosama.newdiverapp.Activities.ProDiver_Main;
 import com.example.engosama.newdiverapp.R;
 
 
@@ -35,5 +36,6 @@ public class EditProfile extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.layout_f_edit_profile, container, false);
     }
+
 
 }
