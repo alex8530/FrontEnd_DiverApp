@@ -6,11 +6,13 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.example.engosama.newdiverapp.Activities.ProDiver_Main;
 import com.example.engosama.newdiverapp.Activities.SharedActivity;
 import com.example.engosama.newdiverapp.R;
 
@@ -68,9 +70,9 @@ public class ProDiver_Profile extends Fragment {
         View view =  inflater.inflate(R.layout.layout_f_pro_diver_profile, container, false);
 
 
-
         Button button_verify_phone=view.findViewById(R.id.button_edit);
         Button btn_charch=view.findViewById(R.id.btn_charch);
+        Button btn_add=view.findViewById(R.id.btn_add);
 
 
         button_verify_phone.setOnClickListener(new View.OnClickListener() {
@@ -98,11 +100,30 @@ public class ProDiver_Profile extends Fragment {
             public void onClick(View v) {
                 Intent intent= new Intent(getActivity(),SharedActivity.class);
                 intent.putExtra("FRAGEMNT" , "MyAccount_DIVER_PRO");
-                startActivity(intent);
+
+                //add animation
+                ActivityOptions options=null;
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    options = ActivityOptions.makeSceneTransitionAnimation(getActivity());
+                    startActivity(intent,options.toBundle());
+                }else {
+                    startActivity(intent );
+                }
+            }
+        });
+
+
+        btn_add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //switch fragment
+                ProDiver_Main.switch_fragment(new Add_Trip());
             }
         });
 
         return view;
     }
+
+
 
 }

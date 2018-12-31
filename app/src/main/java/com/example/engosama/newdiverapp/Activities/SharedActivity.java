@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.transition.Explode;
 
+import com.example.engosama.newdiverapp.Fragments.Add_Trip;
 import com.example.engosama.newdiverapp.Fragments.Checkout_ProDiver;
 import com.example.engosama.newdiverapp.Fragments.EditProfile;
 import com.example.engosama.newdiverapp.Fragments.MyAccount;
@@ -19,6 +20,7 @@ public class SharedActivity extends AppCompatActivity {
     Fragment editProfilePro= new EditProfile();
     Fragment myAccount= new MyAccount();
     Fragment checkout= new Checkout_ProDiver();
+    Fragment add_trip= new Add_Trip();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,12 +41,15 @@ public class SharedActivity extends AppCompatActivity {
                 if (getIntent().getStringExtra("FRAGEMNT").equals("Checkout_ProDiver_DIVER_PRO")){
                     fragment=checkout;
                 }
+
             }
         }
 
         //switch fragment
       getSupportFragmentManager().beginTransaction().replace(R.id.sharedContainer, fragment).commit();
 
+
+        //this is for animation the activity
         initAnimation();
 
 

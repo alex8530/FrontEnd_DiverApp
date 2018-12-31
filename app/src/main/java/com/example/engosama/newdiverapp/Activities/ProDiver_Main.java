@@ -82,4 +82,10 @@ public class ProDiver_Main extends AppCompatActivity {
         }
         /**************************************************************************/
     }
+
+    public static void  switch_fragment(Fragment fragment){
+       FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_left);
+        transaction.replace(R.id.container_new, fragment).commit();
+    }
 }

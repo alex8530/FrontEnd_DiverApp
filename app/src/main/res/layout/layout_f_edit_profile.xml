@@ -97,6 +97,7 @@
                 android:fontFamily="@font/helveticaneuew23forsky_reg"
                 android:textSize="15sp"
                 android:gravity="right"
+                android:focusable="false"
                 android:text="محمد محمد"
                 android:backgroundTint="#BFBFBF"
                 android:textColor="#154968"
@@ -143,6 +144,8 @@
                     android:fontFamily="@font/helveticaneuew23forsky_reg"
                     android:textSize="15sp"
                     android:inputType="phone"
+                    android:focusable="false"
+
                     android:gravity="right"
                     android:text="+966 55 555 555"
                     android:backgroundTint="#BFBFBF"
@@ -175,6 +178,8 @@
                 android:textSize="15sp"
                 android:gravity="right"
                 android:text="1991.12.08"
+                android:focusable="false"
+
                 android:backgroundTint="#BFBFBF"
                 android:textColor="#154968"
                 />
@@ -245,6 +250,8 @@
                 android:layout_marginRight="-4dp"
                 android:fontFamily="@font/helveticaneuew23forsky_reg"
                 android:textSize="15sp"
+                android:focusable="false"
+
                 android:gravity="right"
                 android:hint="أدخل PayPal Client ID الخاص بك"
                 android:backgroundTint="#bfbfbf"
@@ -272,6 +279,8 @@
                 android:layout_marginRight="-4dp"
                 android:fontFamily="@font/helveticaneuew23forsky_reg"
                 android:textSize="15sp"
+                android:focusable="false"
+
                 android:gravity="right"
                 android:text="أنا محمد غواص محترف…"
                 android:backgroundTint="#BFBFBF"
@@ -366,6 +375,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:maxLines="1"
+                android:focusable="false"
+
                 android:layout_marginRight="-4dp"
                 android:fontFamily="@font/helveticaneuew23forsky_reg"
                 android:textSize="15sp"
@@ -394,6 +405,8 @@
                 android:layout_marginRight="-4dp"
                 android:fontFamily="@font/helveticaneuew23forsky_reg"
                 android:textSize="15sp"
+                android:focusable="false"
+
                 android:gravity="right"
                 android:text="عميقه"
                 android:backgroundTint="#BFBFBF"
@@ -414,7 +427,6 @@
                 android:textStyle="bold"
                 android:layout_gravity="right"
                 android:textColor="@drawable/button_text"
-
                 android:textSize="18sp"
                 android:gravity="center"
 
