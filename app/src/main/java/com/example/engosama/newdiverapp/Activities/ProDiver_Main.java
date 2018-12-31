@@ -19,6 +19,7 @@ import com.example.engosama.newdiverapp.Fragments.AllTrips;
 import com.example.engosama.newdiverapp.Fragments.Notification;
 import com.example.engosama.newdiverapp.Fragments.ProDiver_Profile;
 import com.example.engosama.newdiverapp.R;
+import com.example.engosama.newdiverapp.Utils.Constants;
 
 public class ProDiver_Main extends AppCompatActivity {
     public BottomNavigationView bottom_navigation;
@@ -29,6 +30,8 @@ public class ProDiver_Main extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Constants.setStatusBarGradiant(this);
+
         setContentView(R.layout.layout_a_pro_diver_main);
         Add_Trip = new Add_Trip();
         Notification = new Notification();

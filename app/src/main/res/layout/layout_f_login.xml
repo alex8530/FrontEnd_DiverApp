@@ -11,7 +11,7 @@
         android:gravity="center"
         android:orientation="vertical"
         android:paddingStart="37dp"
-        android:paddingEnd="37dp"
+         android:paddingEnd="37dp"
         android:layout_marginTop="-80dp"
         tools:layout_editor_absoluteX="0dp"
         app:layout_constraintLeft_toLeftOf="parent"

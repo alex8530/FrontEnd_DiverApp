@@ -1,12 +1,18 @@
 package com.example.engosama.newdiverapp.Activities;
 
+import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.transition.Explode;
+import android.view.Window;
+import android.view.WindowManager;
 
 import com.example.engosama.newdiverapp.Fragments.Add_Trip;
 import com.example.engosama.newdiverapp.Fragments.Checkout_ProDiver;
@@ -16,6 +22,7 @@ import com.example.engosama.newdiverapp.Fragments.MyAccount;
 import com.example.engosama.newdiverapp.Fragments.ProDiver_Profile;
 import com.example.engosama.newdiverapp.Fragments.SignUp;
 import com.example.engosama.newdiverapp.R;
+import com.example.engosama.newdiverapp.Utils.Constants;
 
 public class SharedActivity extends AppCompatActivity {
     public static FragmentManager fragmentManager;
@@ -29,13 +36,12 @@ public class SharedActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_shared);
-        fragmentManager = getSupportFragmentManager();
-        if (getIntent() !=null)
+         if (getIntent() !=null)
         {
             if (getIntent().getStringExtra("FRAGEMNT") !=null){
                 if (getIntent().getStringExtra("FRAGEMNT").equals("LOGIN")){
                     fragment=loginFragment;
+
                 }
                 if (getIntent().getStringExtra("FRAGEMNT").equals("EDIT_PROFILE_DIVER")){
                     fragment=editProfile;
@@ -52,6 +58,10 @@ public class SharedActivity extends AppCompatActivity {
 
             }
         }
+
+        setContentView(R.layout.activity_shared);
+        fragmentManager = getSupportFragmentManager();
+
 
         //switch fragment
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
@@ -83,4 +93,8 @@ public class SharedActivity extends AppCompatActivity {
         //switch fragment
         SharedActivity.switch_fragment(new Login());
     }
+
+
+
+
 }
