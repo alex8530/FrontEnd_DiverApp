@@ -17,7 +17,10 @@ public class LogoActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(LogoActivity.this,Login.class));
+                Intent intent= new Intent(LogoActivity.this, SharedActivity.class);
+                intent.putExtra("FRAGEMNT","LOGIN");
+                startActivity( intent);
+                finish();
             }
             // ... Hide splash image and show the real UI
         }, 3000);

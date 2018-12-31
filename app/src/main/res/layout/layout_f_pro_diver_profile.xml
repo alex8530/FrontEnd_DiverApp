@@ -326,14 +326,13 @@
                     android:textColor="#909090"/>
 
                 <LinearLayout
-                    android:gravity="right"
-                    android:layout_gravity="right"
-                    android:layout_width="match_parent"
+                     android:layout_width="match_parent"
+
                     android:layout_height="wrap_content">
 
                     <Button
                         android:layout_width="120dp"
-                        android:layout_height="31dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginRight="73dp"
                         android:background="@drawable/bk_button_shape3"
                         android:fontFamily="@font/helveticaneuew23forsky_reg"
@@ -341,7 +340,7 @@
                         android:paddingLeft="16dp"
 
                         android:paddingRight="16dp"
-
+                        android:paddingBottom="8sp"
                         android:text="شحن الرصيد"
                         android:id="@+id/btn_charch"
                          android:textColor="#ffffff"
@@ -378,15 +377,17 @@
                 android:layout_marginTop="18dp"
                 android:background="#e5e5e5"/>
             <LinearLayout
+                android:layout_marginTop="18dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+
                 android:gravity="center"
                 android:layout_weight="100">
 
                 <Button
-                    android:id="@+id/button_resend"
+                    android:id="@+id/button_out"
                     android:layout_width="0dp"
-                    android:layout_height="31dp"
+                    android:layout_height="wrap_content"
                     android:text="خروج"
                     android:layout_marginEnd="10dp"
                     android:fontFamily="@font/helveticaneuew23forsky_reg"
@@ -394,18 +395,22 @@
                     android:layout_weight="30"
                     android:gravity="center"
                     android:textSize="13sp"
+                    android:paddingBottom="8sp"
+
                     android:textColor="#ffffff"
                     />
                 <Button
                     android:id="@+id/button_edit"
                     android:layout_width="0dp"
-                    android:layout_height="31dp"
+                    android:layout_height="wrap_content"
                     android:text="تعديل ملفي الشخصي"
                     android:background="@drawable/bk_button_shape2"
                     android:layout_marginStart="10dp"
                     android:layout_weight="60"
                     android:fontFamily="@font/helveticaneuew23forsky_reg"
                     android:gravity="center"
+                    android:paddingBottom="8sp"
+
                     android:textSize="13sp"
                     android:textColor="#ffffff"
 

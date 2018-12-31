@@ -1,12 +1,17 @@
 package com.example.engosama.newdiverapp.Fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
+import com.example.engosama.newdiverapp.Activities.ProDiver_Main;
+import com.example.engosama.newdiverapp.Activities.SharedActivity;
 import com.example.engosama.newdiverapp.R;
 
 /**
@@ -29,15 +34,6 @@ public class Login extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Login.
-     */
-    // TODO: Rename and change types and number of parameters
     public static Login newInstance(String param1, String param2) {
         Login fragment = new Login();
         Bundle args = new Bundle();
@@ -60,7 +56,42 @@ public class Login extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.layout_f_login, container, false);
+        View view =  inflater.inflate(R.layout.layout_f_login, container, false);
+        Button loginButton =view.findViewById(R.id.loginButton);
+        TextView tvJoinUs =view.findViewById(R.id.tvJoinUs);
+        TextView tvForgetPass =view.findViewById(R.id.tvForgetPass);
+
+
+
+
+        tvForgetPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //switch fragment
+                SharedActivity.switch_fragment(new ForgotPassword());
+            }
+        });
+
+
+
+        tvJoinUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //switch fragment
+                SharedActivity.switch_fragment(new SignUp());
+            }
+        });
+
+
+
+
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), ProDiver_Main.class));
+            }
+        });
+        return view;
     }
 
 }

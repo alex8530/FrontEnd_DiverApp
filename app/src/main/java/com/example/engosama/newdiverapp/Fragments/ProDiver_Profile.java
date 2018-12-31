@@ -36,15 +36,6 @@ public class ProDiver_Profile extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment ProDiver_Profile.
-     */
-    // TODO: Rename and change types and number of parameters
     public static ProDiver_Profile newInstance(String param1, String param2) {
         ProDiver_Profile fragment = new ProDiver_Profile();
         Bundle args = new Bundle();
@@ -70,10 +61,17 @@ public class ProDiver_Profile extends Fragment {
         View view =  inflater.inflate(R.layout.layout_f_pro_diver_profile, container, false);
 
 
+
         Button button_verify_phone=view.findViewById(R.id.button_edit);
         Button btn_charch=view.findViewById(R.id.btn_charch);
         Button btn_add=view.findViewById(R.id.btn_add);
-
+        Button button_out=view.findViewById(R.id.button_out);
+        button_out.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().finish();
+            }
+        });
 
         button_verify_phone.setOnClickListener(new View.OnClickListener() {
             @Override

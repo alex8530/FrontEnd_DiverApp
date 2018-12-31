@@ -101,6 +101,7 @@
             android:layout_marginTop="16dp"
             android:textColor="#a3a3a3"
             android:textSize="16sp"
+            android:id="@+id/tvForgetPass"
             />
     </LinearLayout>
     <LinearLayout
@@ -120,6 +121,7 @@
             android:layout_marginEnd="5dp"
             android:textColor="#2980ba"
             android:textSize="15sp"
+            android:id="@+id/tvJoinUs"
             />
         <TextView
             android:layout_width="wrap_content"

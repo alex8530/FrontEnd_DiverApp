@@ -6,7 +6,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
+import com.example.engosama.newdiverapp.Activities.SharedActivity;
 import com.example.engosama.newdiverapp.R;
 
 /**
@@ -60,7 +62,17 @@ public class ConfirmEmail extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.layout_f_confirm_email, container, false);
+        View view =  inflater.inflate(R.layout.layout_f_confirm_email, container, false);
+        Button logout= view.findViewById(R.id.logout);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //switch fragment
+                SharedActivity.switch_fragment(new Login());
+            }
+        });
+
+        return view;
     }
 
 }

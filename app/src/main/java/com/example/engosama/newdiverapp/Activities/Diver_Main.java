@@ -57,7 +57,10 @@ public class Diver_Main extends AppCompatActivity {
                         fragment = Diver_Profile;
                         break;
                 }
+
                 final FragmentTransaction transaction = fragmentManager.beginTransaction();
+                //this is for animation between fragments
+                transaction.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_left);
                 transaction.replace(R.id.container_new, fragment).commit();
                 return true;
             }

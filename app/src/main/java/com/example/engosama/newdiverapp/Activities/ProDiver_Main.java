@@ -36,7 +36,7 @@ public class ProDiver_Main extends AppCompatActivity {
         AllTrips = new AllTrips();
         fragment = new Fragment();
         /*********************Button Navigation View ****************************/
-        bottom_navigation = (BottomNavigationView)findViewById(R.id.bottom_navigation);
+        bottom_navigation =   findViewById(R.id.bottom_navigation);
         fragmentManager = getSupportFragmentManager();
         bottom_navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -56,19 +56,23 @@ public class ProDiver_Main extends AppCompatActivity {
                         fragment = AllTrips;
                         break;
                     default:
-                        fragment = AllTrips;
+                        fragment = ProDiver_Profile;
                         break;
                 }
+
+
                 final FragmentTransaction transaction = fragmentManager.beginTransaction();
+                //this is for animation between fragments
+                transaction.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_left);
                 transaction.replace(R.id.container_new, fragment).commit();
                 return true;
             }
         });
-        // Add by Alex
-//        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-//        transaction.replace(R.id.container_new, fragment);
-//        transaction.commit();
-        bottom_navigation.setSelectedItemId(R.id.all_trips);
+
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.container_new, fragment);
+        transaction.commit();
+        bottom_navigation.setSelectedItemId(R.id.pro_diver);
 //        ****************************************************************************
         BottomNavigationMenuView menuView = (BottomNavigationMenuView) bottom_navigation.getChildAt(0);
 

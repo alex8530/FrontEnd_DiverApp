@@ -210,7 +210,7 @@
                     android:buttonTint="@color/blueColor"/>
             </LinearLayout>
             <Button
-                android:id="@+id/signupButton"
+                android:id="@+id/btnCreateAccount"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/btn_blue_grad_bg"

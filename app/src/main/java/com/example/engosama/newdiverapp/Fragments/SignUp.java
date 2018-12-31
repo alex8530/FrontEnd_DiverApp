@@ -6,7 +6,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
+import com.example.engosama.newdiverapp.Activities.SharedActivity;
 import com.example.engosama.newdiverapp.R;
 
 /**
@@ -60,7 +63,28 @@ public class SignUp extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.layout_f_sign_up, container, false);
+         View view =  inflater.inflate(R.layout.layout_f_sign_up, container, false);
+        Button btnCreateAccount= view.findViewById(R.id.btnCreateAccount);
+        TextView youAlredyHaveAccountEmailSignup= view.findViewById(R.id.youAlredyHaveAccountEmailSignup);
+
+        youAlredyHaveAccountEmailSignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //switch fragment
+                SharedActivity.switch_fragment(new Login());
+            }
+        });
+
+        btnCreateAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //switch fragment
+                SharedActivity.switch_fragment(new ConfirmEmail());
+            }
+        });
+
+
+        return view;
     }
 
 }
