@@ -13,7 +13,7 @@ public class LogoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        Constants.setStatusBarGradiant(this);
         setContentView(R.layout.layout_a_logo);
 
         new Handler().postDelayed(new Runnable() {

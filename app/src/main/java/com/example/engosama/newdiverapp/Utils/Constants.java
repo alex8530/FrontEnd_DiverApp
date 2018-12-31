@@ -23,17 +23,5 @@ public class Constants {
         }
     }
 
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public static void setStatusBarGradiant3(Activity activity) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            Window window = activity.getWindow();
-            Drawable background = activity.getResources().getDrawable(R.drawable.bk_login_shape);
-            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(activity.getResources().getColor(android.R.color.transparent));
-             window.setBackgroundDrawable(background);
-        }
-    }
-
-
 
 }
