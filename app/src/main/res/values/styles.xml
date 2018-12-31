@@ -6,9 +6,14 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowContentTransitions">true</item>
+
     </style>
     <style name="checkBoxStyle" parent="Base.Theme.AppCompat">
         <item name="colorAccent">#4599a3</item>
         <item name="android:textColorSecondary">#2980ba</item>
     </style>
+
+    <!-- Enable window content Transitions - Either specify here or specify in the Activity-->
 </resources>

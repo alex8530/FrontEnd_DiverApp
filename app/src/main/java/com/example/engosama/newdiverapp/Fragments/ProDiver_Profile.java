@@ -1,7 +1,9 @@
 package com.example.engosama.newdiverapp.Fragments;
 
 
+import android.app.ActivityOptions;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -70,12 +72,23 @@ public class ProDiver_Profile extends Fragment {
         Button button_verify_phone=view.findViewById(R.id.button_edit);
         Button btn_charch=view.findViewById(R.id.btn_charch);
 
+
         button_verify_phone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent= new Intent(getActivity(),SharedActivity.class);
                 intent.putExtra("FRAGEMNT" , "EDIT_PROFILE_DIVER_PRO");
-                startActivity(intent);
+
+
+                //add animation
+                ActivityOptions options=null;
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    options = ActivityOptions.makeSceneTransitionAnimation(getActivity());
+                    startActivity(intent,options.toBundle());
+                }else {
+                    startActivity(intent );
+                }
+
             }
         });
 

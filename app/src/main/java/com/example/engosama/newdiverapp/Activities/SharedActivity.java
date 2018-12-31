@@ -4,6 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.transition.Explode;
 
 import com.example.engosama.newdiverapp.Fragments.Checkout_ProDiver;
 import com.example.engosama.newdiverapp.Fragments.EditProfile;
@@ -44,5 +45,16 @@ public class SharedActivity extends AppCompatActivity {
         //switch fragment
       getSupportFragmentManager().beginTransaction().replace(R.id.sharedContainer, fragment).commit();
 
+        initAnimation();
+
+
     }
+
+
+    private void initAnimation() {
+        Explode enterTransition = new Explode();
+        enterTransition.setDuration(1000);
+        getWindow().setEnterTransition(enterTransition);
+    }
+
 }
